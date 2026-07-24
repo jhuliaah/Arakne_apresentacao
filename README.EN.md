@@ -445,7 +445,9 @@ Project for the Hack4Freedom São Paulo 2026 hackathon (women-only team).
 
 ## Repository and Links
 
-- **Main repo:** github.com/jhuliaah/Arakne
+- **Main repo:** https://github.com/jhuliaah/Arakne
+- **Deploy repo (this one):** https://github.com/jhuliaah/Arakne_apresentacao
+- **Live demo (deployed frontend):** https://arakne-coral.vercel.app/
 - **Frontend deploy:** Vercel (`vercel.json` included)
 - **Backend deploy:** Railway (configure env vars in dashboard)
 
