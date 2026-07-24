@@ -1,0 +1,101 @@
+# ──────────────────────────────────────────────────────────────
+#  Arakne — docker-compose para demo local (hackathon hack4freedom)
+#
+#  Sobe: Bitcoin Core (regtest) + LND + LNbits + Backend + Frontend
+#  Uso:  docker compose up --build
+# ──────────────────────────────────────────────────────────────
+
+services:
+  # ── Bitcoin Core (regtest) ──────────────────────────────────
+  bitcoin:
+    image: lncm/bitcoind:26.0
+    volumes:
+      - bitcoin-data:/data
+      - ./config/bitcoin/bitcoin.conf:/data/bitcoin.conf:ro
+    ports:
+      - "18443:18443"   # RPC
+      - "28332:28332"   # ZMQ blocks
+      - "28333:28333"   # ZMQ tx
+    networks:
+      - arakne-net
+
+  # ── LND (regtest, conectado ao Bitcoin Core) ───────────────
+  lnd:
+    image: lightninglabs/lnd:v0.18.0-beta
+    volumes:
+      - lnd-data:/root/.lnd
+      - ./config/lnd/lnd.conf:/root/.lnd/lnd.conf:ro
+    ports:
+      - "10009:10009"   # gRPC
+      - "8081:8081"     # REST
+    depends_on:
+      - bitcoin
+    networks:
+      - arakne-net
+
+  # ── LNbits ─────────────────────────────────────────────────
+  lnbits:
+    image: lnbits/lnbits:0.12.9
+    environment:
+      - LNBITS_BACKEND_WALLET_CLASS=VoidWallet
+      - LNBITS_DATA_FOLDER=/data
+      - LNBITS_HOST=0.0.0.0
+      - LNBITS_PORT=5000
+    volumes:
+      - lnbits-data:/data
+      - lnd-data:/root/.lnd:ro   # acesso ao tls.cert / macaroon (após init)
+    ports:
+      - "5000:5000"
+    depends_on:
+      - lnd
+    networks:
+      - arakne-net
+
+  # ── Backend (FastAPI) ───────────────────────────────────────
+  backend:
+    build: ./backend
+    environment:
+      - LNBITS_URL=http://lnbits:5000
+      - LNBITS_ADMIN_KEY=${LNBITS_ADMIN_KEY:-}
+      - LNBITS_POOL_KEY=${LNBITS_POOL_KEY:-}
+      - MP_ACCESS_TOKEN=${MP_ACCESS_TOKEN:-}
+      - MP_WEBHOOK_URL=${MP_WEBHOOK_URL:-}
+      - PIX_NOME_RECEBEDOR=${PIX_NOME_RECEBEDOR:-Ateliê Fio de Ouro Materiais Artesanais}
+      - BINANCE_API_KEY=${BINANCE_API_KEY:-}
+      - BINANCE_API_SECRET=${BINANCE_API_SECRET:-}
+      - MULTISIG_DESCRIPTOR=${MULTISIG_DESCRIPTOR:-}
+      - MULTISIG_ENDERECO=${MULTISIG_ENDERECO:-}
+      - MULTISIG_QUORUM=${MULTISIG_QUORUM:-2-de-3}
+      - MULTISIG_NETWORK=${MULTISIG_NETWORK:-regtest}
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - lnbits
+    networks:
+      - arakne-net
+
+  # ── Frontend (Vite dev server) ─────────────────────────────
+  frontend:
+    build: ./frontend
+    environment:
+      - API_URL=http://backend:8000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules   # preserva node_modules do container
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - arakne-net
+
+networks:
+  arakne-net:
+    driver: bridge
+
+volumes:
+  bitcoin-data:
+  lnd-data:
+  lnbits-data:

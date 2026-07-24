@@ -1,0 +1,39 @@
+# Logs
+*.log
+
+# Node
+node_modules
+dist
+dist-ssr
+*.local
+.eslintcache
+.tsbuildinfo
+
+# Editor
+.idea
+.vscode
+.DS_Store
+
+# Secrets
+.env
+.env.real.bak
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+backend/arakne.db
+backend/arakne.db-*
+.venv/
+venv/
+
+# Docker volumes
+bitcoin-data/
+lnd-data/
+lnbits-data/
+
+# Multisig (never commit mnemonics)
+scripts/steward*.json
+scripts/custodia_multisig_*.json

@@ -1,0 +1,29 @@
+{
+  "name": "arakne-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@breeztech/breez-sdk-spark": "^0.7.10",
+    "bip39": "^3.1.0",
+    "jsqr": "^1.4.0",
+    "nostr-tools": "^2.23.12",
+    "qrcode": "^1.5.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "shamir-secret-sharing": "^0.0.4"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.3",
+    "vite": "^8.1.5"
+  }
+}

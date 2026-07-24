@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Costura à Máquina — Arakne</title>
+  <style>
+    :root {
+      --cor-primaria: #C5E8DC;
+      --cor-texto: #2b2b2b;
+      --cor-suave: #f0f8f5;
+      --cor-borda: #a8d4c4;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: var(--cor-texto); line-height: 1.7; background: var(--cor-suave); }
+    header { background: linear-gradient(135deg, var(--cor-primaria), #d8f0e6); padding: 3rem 1.5rem 2rem; text-align: center; border-bottom: 4px double var(--cor-borda); }
+    header h1 { margin: 0 0 0.5rem; font-size: 2.2rem; }
+    header .emoji { font-size: 3rem; display: block; margin-bottom: 0.5rem; }
+    header p { margin: 0; opacity: 0.85; font-style: italic; }
+    main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    nav { background: #fff; border: 1px solid var(--cor-borda); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    nav h2 { margin-top: 0; font-size: 1.15rem; color: #2a6a5a; }
+    nav ul { margin: 0; padding-left: 1.25rem; }
+    nav a { color: #3a8a7a; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    section { margin-bottom: 2.5rem; }
+    h2 { color: #2a6a5a; border-bottom: 2px solid var(--cor-primaria); padding-bottom: 0.4rem; margin-top: 0; }
+    h3 { color: #3a8a7a; margin-top: 1.5rem; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    .dica { background: #fff; border-left: 4px solid var(--cor-primaria); padding: 0.75rem 1rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .dica strong { color: #2a6a5a; }
+    code { background: #dceee7; padding: 0.1rem 0.35rem; border-radius: 4px; font-family: "Courier New", monospace; font-size: 0.95em; }
+    footer { text-align: center; padding: 1.5rem; color: #888; font-size: 0.85rem; border-top: 1px solid var(--cor-borda); }
+    @media (max-width: 480px) { header h1 { font-size: 1.7rem; } main { padding: 1.5rem 1rem 3rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="emoji">✂️</span>
+    <h1>Guia de Costura à Máquina</h1>
+    <p>Da primeira costura reta ao zíper e viés — peças completas com acabamento profissional.</p>
+  </header>
+
+  <main>
+    <nav>
+      <h2>Sumário</h2>
+      <ul>
+        <li><a href="#maquina">1. Conhecendo a máquina e ponto reto</a></li>
+        <li><a href="#utilitarios">2. Zigue-zague e casear</a></li>
+        <li><a href="#bainhas">3. Bainhas e bainha invisível</a></li>
+        <li><a href="#acabamentos">4. Zíper e viés</a></li>
+        <li><a href="#projeto">5. Molde, corte e projeto final</a></li>
+      </ul>
+    </nav>
+
+    <section id="maquina">
+      <h2>1. Conhecendo a máquina e ponto reto</h2>
+      <h3>Partes principais</h3>
+      <ul>
+        <li><strong>Carretel superior:</strong> onde o fio entra, segue pela guia, tensor e alavanca.</li>
+        <li><strong>Bobina inferior:</strong> encaixada na caixa, sob a placa da agulha.</li>
+        <li><strong>Calcador:</strong> pressiona o tecido contra os dentes.</li>
+        <li><strong>Regulador de tensão:</strong> ajusta a pressão do fio superior.</li>
+        <li><strong>Seletor de ponto:</strong> escolhe reto, zigue-zague, casear, etc.</li>
+      </ul>
+      <h3>Enchendo a bobina e passando a linha</h3>
+      <ol>
+        <li>Passe o fio do carretel para a bobina pelo guia.</li>
+        <li>Encaixe a bobina no eixo e ligue a máquina em velocidade baixa.</li>
+        <li>Quando encher, corte e coloque a bobina na caixa.</li>
+        <li>Passe o fio superior pela sequência de guias até a agulha.</li>
+        <li>Puxe o fio inferior para cima com uma volta manual da máquina.</li>
+      </ol>
+      <h3>Ponto reto</h3>
+      <p>Use margem de costura <code>1,5 cm</code> (alinhando a borda do tecido com a guia da máquina). Comece com 2-3 pontos em reverso para travar, costure reto e termine com reverso novamente.</p>
+      <div class="dica"><strong>Controle de velocidade:</strong> pressione o pedal suavemente. Costure devagar nos cantos — solte o pedal e gire o tecido com a agulha baixa.</div>
+    </section>
+
+    <section id="utilitarios">
+      <h2>2. Zigue-zague e casear</h2>
+      <h3>Ponto zigue-zague</h3>
+      <p>Use para acabamento de borda e prevenir desfiamento. Selecione zigue-zague médio (largura 3-4), costure ao longo da borda do tecido, dentro da margem de costura. Em máquinas sem overlock, é o acabamento essencial.</p>
+      <h3>Casear automático</h3>
+      <ol>
+        <li>Marque o comprimento da casa no tecido.</li>
+        <li>Selecione o ponto casear e ajuste a largura ao tamanho do botão.</li>
+        <li>Posicione o tecido sob o calcador de casear.</li>
+        <li>Costure o primeiro lado, a máquina faz o fundo automaticamente.</li>
+        <li>Costure o segundo lado e a máquina barra o fim.</li>
+        <li>Corte a casa no meio com abridor, sem atingir os pontos.</li>
+      </ol>
+      <div class="dica"><strong>Teste antes:</strong> caseie sempre em retalho do mesmo tecido para ajustar largura e densidade antes de ir para a peça.</div>
+    </section>
+
+    <section id="bainhas">
+      <h2>3. Bainhas e bainha invisível</h2>
+      <h3>Bainha simples com dobra dupla</h3>
+      <ol>
+        <li>Dobre a borda 1 cm para o avesso e passe o ferro.</li>
+        <li>Dobre mais 1-2 cm e prenda com alfinetes.</li>
+        <li>Costure reto perto da dobra superior, pelo direito.</li>
+        <li>Passe o ferro para assentar a bainha.</li>
+      </ol>
+      <h3>Bainha invisível à máquina</h3>
+      <p>Use o calcador de bainha cega. Dobre a bainha para o avesso, posicione a dobra contra a guia do calcador. A máquina pega 1-2 fios do direito a cada 5-6 pontos, criando bainha invisível pelo lado de fora. Ideal para calças e saias.</p>
+      <div class="dica"><strong>Atenção:</strong> a bainha invisível só funciona bem em tecidos que não desfiam muito. Em tecidos finos, prefira bainha à mão.</div>
+    </section>
+
+    <section id="acabamentos">
+      <h2>4. Zíper e viés</h2>
+      <h3>Zíper invisível</h3>
+      <ol>
+        <li>Use o calcador de zíper invisível.</li>
+        <li>Abra o zíper e posicione o direito contra o direito do tecido.</li>
+        <li>Costure descendo a cada lado, rente aos dentes.</li>
+        <li>Feche o zíper e verifique o alinhamento.</li>
+        <li>Termine a costura abaixo do fim do zíper com ponto reto.</li>
+      </ol>
+      <h3>Viés (bias tape)</h3>
+      <p>O viés é uma tira cortada no bias (45°) que não desfia e contorna curvas. Para aplicar em bordas:</p>
+      <ol>
+        <li>Abra o viés e alinhe a borda direita com a borda do tecido.</li>
+        <li>Costure na primeira dobra.</li>
+        <li>Dobre o viés para o avesso e prenda com alfinetes.</li>
+        <li>Costure pelo direito, "stitch in the ditch" (na costura visível).</li>
+      </ol>
+    </section>
+
+    <section id="projeto">
+      <h2>5. Molde, corte e projeto final</h2>
+      <h3>Lendo um molde básico</h3>
+      <ul>
+        <li>Linha contínua = borda de corte.</li>
+        <li>Linha tracejada = linha de costura.</li>
+        <li>Triângulos = marcas de alinhamento (pique com a tesoura).</li>
+        <li>Seta grande = fio do tecido (alinhamento obrigatório).</li>
+      </ul>
+      <h3>Corte</h3>
+      <p>Prenda o molde ao tecido com alfinetes, respeitando o fio. Corte com tesoura microserrada, deixando margem de 1,5 cm ao redor do molde. Marque as piques antes de remover o molde.</p>
+      <h3>Projeto final: saquinho com forro</h3>
+      <ol>
+        <li>Corte 2 retângulos externos e 2 de forro (15 × 20 cm).</li>
+        <li>Costure os lados e fundo do externo e do forro separadamente.</li>
+        <li>Para o cordão: dobre 2 cm no topo, costure e deixe 2 passagens.</li>
+        <li>Insira o forro no externo, direito com direito, alinhando as bordas.</li>
+        <li>Costure o topo deixando abertura para virar.</li>
+        <li>Vire do direito, passe o cordão pelas passagens.</li>
+      </ol>
+      <div class="dica"><strong>Dica final:</strong> passe o ferro em cada costura antes da próxima etapa. O ferro é metade do acabamento profissional.</div>
+    </section>
+  </main>
+
+  <footer>
+    Guia de Costura à Máquina · Arakne — material de apoio da trilha ✂️
+  </footer>
+</body>
+</html>

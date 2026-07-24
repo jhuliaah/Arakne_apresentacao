@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Tricô Básico — Arakne</title>
+  <style>
+    :root {
+      --cor-primaria: #C5D9E8;
+      --cor-texto: #2b2b2b;
+      --cor-suave: #f4f8fb;
+      --cor-borda: #b3c8db;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: var(--cor-texto); line-height: 1.7; background: var(--cor-suave); }
+    header { background: linear-gradient(135deg, var(--cor-primaria), #d8e6f1); padding: 3rem 1.5rem 2rem; text-align: center; border-bottom: 4px double var(--cor-borda); }
+    header h1 { margin: 0 0 0.5rem; font-size: 2.2rem; }
+    header .emoji { font-size: 3rem; display: block; margin-bottom: 0.5rem; }
+    header p { margin: 0; opacity: 0.85; font-style: italic; }
+    main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    nav { background: #fff; border: 1px solid var(--cor-borda); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    nav h2 { margin-top: 0; font-size: 1.15rem; color: #3a5a7a; }
+    nav ul { margin: 0; padding-left: 1.25rem; }
+    nav a { color: #4a78a8; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    section { margin-bottom: 2.5rem; }
+    h2 { color: #3a5a7a; border-bottom: 2px solid var(--cor-primaria); padding-bottom: 0.4rem; margin-top: 0; }
+    h3 { color: #5278a0; margin-top: 1.5rem; }
+    ul, ol { padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    .dica { background: #fff; border-left: 4px solid var(--cor-primaria); padding: 0.75rem 1rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .dica strong { color: #3a5a7a; }
+    code { background: #e0ebf3; padding: 0.1rem 0.35rem; border-radius: 4px; font-family: "Courier New", monospace; font-size: 0.95em; }
+    footer { text-align: center; padding: 1.5rem; color: #888; font-size: 0.85rem; border-top: 1px solid var(--cor-borda); }
+    @media (max-width: 480px) { header h1 { font-size: 1.7rem; } main { padding: 1.5rem 1rem 3rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="emoji">🧣</span>
+    <h1>Guia de Tricô Básico</h1>
+    <p>Do primeiro ponto meia ao primeiro cachecol — a base de tudo no tricô.</p>
+  </header>
+
+  <main>
+    <nav>
+      <h2>Sumário</h2>
+      <ul>
+        <li><a href="#materiais">1. Materiais e montagem</a></li>
+        <li><a href="#meia-trico">2. Ponto meia e ponto tricô</a></li>
+        <li><a href="#pontos">3. Cordão, jersey e barra 1/1</a></li>
+        <li><a href="#aum-dim">4. Laçadas, aumentos e diminuições</a></li>
+        <li><a href="#final">5. Arremate, montagem e blocking</a></li>
+      </ul>
+    </nav>
+
+    <section id="materiais">
+      <h2>1. Materiais e montagem</h2>
+      <p>Para começar, use agulhas de <code>5 mm</code> e um fio médio (espessura DK ou worsted). Fios claros e lisos ajudam a ver cada ponto.</p>
+      <h3>Montagem (cast on) — laçada simples</h3>
+      <ol>
+        <li>Faça um nó deslizante e coloque na agulha esquerda.</li>
+        <li>Insira a ponta da agulha direita no laço da esquerda, da frente para trás.</li>
+        <li>Laçada com o fio na mão direita e puxe pelo laço — novo ponto na agulha direita.</li>
+        <li>Devolva o novo ponto para a agulha esquerda.</li>
+        <li>Repita até o número de pontos da receita.</li>
+      </ol>
+      <div class="dica"><strong>Tensão:</strong> não aperte os pontos na agulha. Eles devem deslizar com leveza — pontos apertados cansam a mão e dificultam o trabalho.</div>
+    </section>
+
+    <section id="meia-trico">
+      <h2>2. Ponto meia e ponto tricô</h2>
+      <h3>Ponto meia (m / knit)</h3>
+      <p>Com o fio <strong>atrás</strong> da agulha, insira a direita no primeiro ponto da esquerda, da frente para trás. Laçada, puxe pelo ponto e solte o ponto da agulha esquerda. É o movimento fundamental do tricô.</p>
+      <h3>Ponto tricô (t / purl)</h3>
+      <p>Com o fio <strong>à frente</strong> da agulha, insira a direita no primeiro ponto da esquerda, de trás para frente. Laçada, puxe pelo ponto e solte. É o "irmão" do meia, criando o lado texturizado do tecido.</p>
+      <div class="dica"><strong>Atenção:</strong> antes de cada ponto, confirme a posição do fio. Meia = fio atrás; tricô = fio à frente. Esquecer isso é a causa nº 1 de pontos acidentais.</div>
+    </section>
+
+    <section id="pontos">
+      <h2>3. Cordão, jersey e barra 1/1</h2>
+      <h3>Ponto cordão (garter)</h3>
+      <p>Todas as carreiras em ponto meia. O tecido fica texturizado, não enrola e é o mais fácil de todos — ideal para o primeiro cachecol.</p>
+      <h3>Ponto jersey (stockinette)</h3>
+      <p>Carreiras alternadas: direito em meia, avesso em tricô. Cria tecido liso e elegante, mas <strong>enrola nas bordas</strong>. Sempre finalize com barra para evitar.</p>
+      <h3>Barra 1/1 (rib)</h3>
+      <p>Alterne 1 meia, 1 tricô em todas as carreiras (sempre meia sobre meia e tricô sobre tricô). Cria elasticidade — usada em barras de punho, gola e bainha. Não enrola.</p>
+    </section>
+
+    <section id="aum-dim">
+      <h2>4. Laçadas, aumentos e diminuições</h2>
+      <h3>Laçada (yo)</h3>
+      <p>Passe o fio por cima da agulha direita antes do próximo ponto. Na carreira seguinte, essa laçada vira um furinho — base de pontos rendados.</p>
+      <h3>Aumento intercalado</h3>
+      <p>Levante a meada entre dois pontos com a agulha esquerda e trabalhe-a em meia torcido — adiciona ponto sem deixar furo.</p>
+      <h3>Diminuições</h3>
+      <ul>
+        <li><strong>2pjm (2 pontos juntos em meia):</strong> insira a agulha em 2 pontos juntos, trabalhe em meia — diminuição à direita.</li>
+        <li><strong>Mate simples:</strong> passe 1 ponto sem trabalhar, faça 1 meia, passe o ponto por cima — diminuição à esquerda.</li>
+      </ul>
+      <div class="dica"><strong>Simetria:</strong> use 2pjm no lado direito e mate simples no lado esquerdo para decotes e cavas simétricas.</div>
+    </section>
+
+    <section id="final">
+      <h2>5. Arremate, montagem e blocking</h2>
+      <h3>Arremate (bind-off)</h3>
+      <ol>
+        <li>Trabalhe 2 pontos.</li>
+        <li>Passe o primeiro por cima do segundo (1 ponto arrematado).</li>
+        <li>Trabalhe o próximo ponto e repita até o fim.</li>
+        <li>Corte o fio e puxe pelo último laço.</li>
+      </ol>
+      <h3>Costura mattress</h3>
+      <p>Para unir peças lateralmente, use a agulha de tapeceiro e costure sob as meadas horizontais entre as carreiras — a junção fica invisível.</p>
+      <h3>Blocking úmido</h3>
+      <p>Molhe a peça, estenda sobre toalhas, modele nas medidas finais e deixe secar. Essencial para abrir pontos rendados e uniformizar a tensão.</p>
+    </section>
+  </main>
+
+  <footer>
+    Guia de Tricô Básico · Arakne — material de apoio da trilha 🧣
+  </footer>
+</body>
+</html>
