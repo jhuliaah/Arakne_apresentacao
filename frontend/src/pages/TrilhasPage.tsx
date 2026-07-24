@@ -84,6 +84,30 @@ export default function TrilhasPage({
           Escolha o que quer aprender hoje
         </p>
 
+        {(() => {
+          const emAndamento = (trilhas ?? [])
+            .filter((t) => t.aulas_concluidas > 0 && t.aulas_concluidas < t.total_aulas)
+            .sort((a, b) => b.aulas_concluidas / b.total_aulas - a.aulas_concluidas / a.total_aulas)[0];
+          if (!emAndamento) return null;
+          const pct = Math.round((emAndamento.aulas_concluidas / emAndamento.total_aulas) * 100);
+          return (
+            <button
+              className="continue-trilha"
+              onClick={() => onOpenTrilha(emAndamento.id)}
+            >
+              <div className="continue-trilha__eyebrow">Continue de onde parou</div>
+              <div className="continue-trilha__name">{emAndamento.titulo}</div>
+              <div className="continue-trilha__bar">
+                <div className="continue-trilha__fill" style={{ width: `${pct}%` }} />
+              </div>
+              <div className="continue-trilha__meta">
+                <span>{emAndamento.aulas_concluidas} de {emAndamento.total_aulas} aulas</span>
+                <span>{pct}%</span>
+              </div>
+            </button>
+          );
+        })()}
+
         <div className="filter-chips" role="tablist" aria-label="Filtrar por técnica">
           {TECNICAS.map((t) => (
             <button
@@ -173,12 +197,6 @@ export default function TrilhasPage({
             ))}
           </div>
         )}
-
-        <footer className="catalog__footer">
-          <p className="catalog__footer-text">
-            Vibed with <a href="https://shakespeare.diy" target="_blank" rel="noopener noreferrer">Shakespeare</a>
-          </p>
-        </footer>
       </main>
       <BottomNav active="catalog" onNavigate={onNavigate} />
     </div>

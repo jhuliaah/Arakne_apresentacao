@@ -145,12 +145,6 @@ export default function DecoyPage({ onBack }: DecoyPageProps) {
         {filtered.length === 0 && (
           <p className="catalog__empty">Nenhum padrão encontrado.</p>
         )}
-
-        <footer className="catalog__footer">
-          <p className="catalog__footer-text">
-            Vibed with <a href="https://shakespeare.diy" target="_blank" rel="noopener noreferrer">Shakespeare</a>
-          </p>
-        </footer>
       </main>
     </div>
   );

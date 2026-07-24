@@ -54,12 +54,6 @@ export default function CatalogPage({ onRevealDecoy, onNavigate, inviteCodigo }:
         {filtered.length === 0 && (
           <p className="catalog__empty">Nenhum padrão encontrado.</p>
         )}
-
-        <footer className="catalog__footer">
-          <p className="catalog__footer-text">
-            Vibed with <a href="https://shakespeare.diy" target="_blank" rel="noopener noreferrer">Shakespeare</a>
-          </p>
-        </footer>
       </main>
       <BottomNav active="catalog" onNavigate={onNavigate} />
     </div>

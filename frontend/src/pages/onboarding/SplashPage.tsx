@@ -12,8 +12,8 @@ export default function SplashPage({ onCreateAccount, onHaveAccount, onRecuperar
     <div className="page">
       <Header />
       <main className="onboarding onboarding--centered">
-        <div className="onboarding__glyph">🧶</div>
-        <h1 className="onboarding__title">Arakne</h1>
+        <img src="/favicon.svg" alt="" className="onboarding__mark" />
+        <h1 className="onboarding__wordmark">Arakne</h1>
         <p className="onboarding__tagline">
           padrões de crochê &amp; tricô,<br />feitos por mãos, para mãos.
         </p>
